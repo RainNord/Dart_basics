@@ -16,10 +16,10 @@ extension TransferSystem on int {
 
   int binaryToDecimal(){
     String strBinary  = this.toString();
-    num result = 0;
+    int result = 0;
     for(int i=strBinary.length-1; i>=0; i--){   
-      result += pow(2,i)*num.parse(strBinary[strBinary.length-i-1]); 
+      result += pow(2,i).toInt()*int.parse(strBinary[strBinary.length-i-1]); 
     }
-    return result.toInt();
+    return result;
   }
 }

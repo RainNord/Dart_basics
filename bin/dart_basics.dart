@@ -2,6 +2,7 @@ import 'package:dart_basics/Euclidean_algorithm.dart';
 import 'package:dart_basics/transfer_system.dart';
 import 'package:dart_basics/search_num.dart' as searchNum;
 import 'package:dart_basics/serch_word_count.dart' as searchWord;
+import 'package:dart_basics/search_num_in_word.dart' as searchNumInWord; 
 
 void main() {
   // 1.Реализуйте методы вычисления НОД и НОК целых чисел. Реализуйте метод, который разбивает число на простые множители и возвращает их.
@@ -24,4 +25,16 @@ void main() {
   print("Задание 4.");
   List<String> listString = ["cat","dog","cat","sparrow","sparrow","cat","horse"];
   print("Колисетво вхождений слов в коллекцию: ${searchWord.searchWordCount(listString)}");
+
+  // 5.Есть коллекция строк вида ‘one, two, three, cat, dog’ или любого другого. 
+  //  Реализуйте метод, возвращающий цифры без повторений, которые встречаются в данной строке. 
+  //  Однако цифры встречаются в виде английских слов от zero до nine. 
+  //  Например, в результате строки ‘one, two, zero, zero’ мы получим следующий результат: [1, 2, 0]. 
+  //  Если в строке есть слова, не являющиеся цифрами от 0 до 9, пропускайте их.
+  print("Задание 5.");
+  listString = ["one","dog","cat","three","five","sparrow","nine","one","nine","seven"];
+  print("Цифры встречающиеся в коллекции: ${searchNumInWord.searchNumInWord(listString)}");
+
+
+
 }
