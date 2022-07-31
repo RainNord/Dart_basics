@@ -20,8 +20,8 @@ class Point{
   }
 
   double triangleArea(Point pointB, Point pointC){
-    var a = this.distanceTo(pointB);
-    var b = this.distanceTo(pointC);
+    var a = distanceTo(pointB);
+    var b = distanceTo(pointC);
     var c = pointB.distanceTo(pointC);
     var p = (a+b+c)/2;
 

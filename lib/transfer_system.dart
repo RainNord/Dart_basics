@@ -15,7 +15,7 @@ extension TransferSystem on int {
   }
 
   int binaryToDecimal(){
-    String strBinary  = this.toString();
+    String strBinary  = toString();
     int result = 0;
     for(int i=strBinary.length-1; i>=0; i--){   
       result += pow(2,i).toInt()*int.parse(strBinary[strBinary.length-i-1]); 
