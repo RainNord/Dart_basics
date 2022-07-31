@@ -1,5 +1,5 @@
 Map<String,int> searchWordCount(List<String> stringList){
-  Map<String,int> stringMap = {};
+  Map<String, int> stringMap = {};
 
   for(int i=0; i<stringList.length; i++){
     if(!stringMap.containsKey(stringList[i])){

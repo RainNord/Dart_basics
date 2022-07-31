@@ -2,7 +2,8 @@ import 'package:dart_basics/Euclidean_algorithm.dart';
 import 'package:dart_basics/transfer_system.dart';
 import 'package:dart_basics/search_num.dart' as searchNum;
 import 'package:dart_basics/serch_word_count.dart' as searchWord;
-import 'package:dart_basics/search_num_in_word.dart' as searchNumInWord; 
+import 'package:dart_basics/search_num_in_word.dart' as searchNumInWord;
+import 'package:dart_basics/point.dart'; 
 
 void main() {
   // 1.Реализуйте методы вычисления НОД и НОК целых чисел. Реализуйте метод, который разбивает число на простые множители и возвращает их.
@@ -35,6 +36,18 @@ void main() {
   listString = ["one","dog","cat","three","five","sparrow","nine","one","nine","seven"];
   print("Цифры встречающиеся в коллекции: ${searchNumInWord.searchNumInWord(listString)}");
 
+  // 6.Реализуйте класс Point, который описывает точку в трёхмерном пространстве.
+  // У данного класса реализуйте метод distanceTo(Point another), который возвращает расстояние от данной точки до точки в параметре. 
+  // По желанию можете реализовать метод, принимающий три точки в трёхмерном пространстве и возвращающий площадь треугольника, который образуют данные точки. 
+  // Реализуйте factory-конструкторы для данного класса, возвращающие начало координат, и ещё несколько на своё усмотрение (например, 
+  // конструктор, возвращающий точку с координатами [1,1,1], которая определяет единичный вектор).
+  print("Задание 6.");
+  Point pointZero = Point.zero();
+  Point pointOne = Point.unitVector();
+  Point pointTwo = Point(6,2,8);
+  Point pointThree = Point(4,7,9);
+  print("Расстояние между точками One и Two: ${pointOne.distanceTo(pointTwo)}");
+  print("Площадь треугольника образующегося из точек One, Two, Three: ${pointOne.triangleArea(pointTwo, pointThree)}");
 
 
 }
