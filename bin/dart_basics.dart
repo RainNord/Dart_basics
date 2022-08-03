@@ -77,6 +77,6 @@ void main() {
   userManager.addUser(userAdmin);
   userManager.addUser(GeneralUser('userTwo@gmail.com'));
   print("Получаем почту всех пользователей: ${userManager.getEmailUsers()}");
-  userManager.deleteUserByIndex(0);
+  userManager.deleteUserByIndex(2);
   print("Получаем почту всех пользователей: ${userManager.getEmailUsers()}");
 }

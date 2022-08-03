@@ -24,7 +24,7 @@ class UserManager<T extends User>{
   void deleteUser(T delUser) => listUsers.remove(delUser);
 
   void deleteUserByIndex(int indexUser){
-     if((indexUser>=0) & (indexUser<=listUsers.length)) {
+     if((indexUser>=0) & (indexUser<listUsers.length)) {
        listUsers.removeAt(indexUser);
      }
   }
