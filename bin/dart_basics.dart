@@ -5,6 +5,7 @@ import 'package:dart_basics/serch_word_count.dart' as search_word;
 import 'package:dart_basics/search_num_in_word.dart' as search_num_in_word;
 import 'package:dart_basics/point.dart';
 import 'package:dart_basics/exponent_root.dart';
+import 'package:dart_basics/users_work.dart';
 
 void main() {
   // 1.Реализуйте методы вычисления НОД и НОК целых чисел. Реализуйте метод, который разбивает число на простые множители и возвращает их.
@@ -59,4 +60,23 @@ void main() {
   }catch(e){
     print(e);
   }
+
+  // 8.Создайте класс User, у которого есть поле email. 
+  //Реализуйте два наследника данного класса AdminUser и GeneralUser. 
+  //Реализуйте mixin над классом User, у которого будет метод getMailSystem, который возвращает значение из email, 
+  //которое находится после @. Например, если email пользователя user@mail.ru, то данный метод вернёт mail.ru. 
+  //Используйте данный миксин на AdminUser. Далее реализуйте класс UserManager<T extends User>, 
+  //у которого будет храниться список пользователей и будут методы добавления или удаления их. 
+  //Также в UserManager реализуйте метод, который выведет почту всех пользователей, однако если пользователь admin, 
+  //будет выведено значение после @. Проверьте реализованные методы на практике.
+  print("Задание 8.");
+  AdminUser userAdmin = AdminUser('admin@inbox.ru');
+  print("Получаем значение из email: ${userAdmin.getMailSystem}");
+  UserManager userManager = UserManager();
+  userManager.addUser(GeneralUser('userOne@gmail.com'));
+  userManager.addUser(userAdmin);
+  userManager.addUser(GeneralUser('userTwo@gmail.com'));
+  print("Получаем почту всех пользователей: ${userManager.getEmailUsers()}");
+  userManager.deleteUserByIndex(0);
+  print("Получаем почту всех пользователей: ${userManager.getEmailUsers()}");
 }
