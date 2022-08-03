@@ -1,4 +1,4 @@
-class Euclid{
+class DelimetersCalculator{
 
   int gcd(int a, int b){
     if(a < b){
