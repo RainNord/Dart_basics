@@ -6,6 +6,8 @@ import 'package:dart_basics/search_num_in_word.dart' as search_num_in_word;
 import 'package:dart_basics/point.dart';
 import 'package:dart_basics/exponent_root.dart';
 import 'package:dart_basics/users_work.dart';
+import 'package:dart_basics/integral.dart';
+import 'dart:math';
 
 void main() {
   // 1.Реализуйте методы вычисления НОД и НОК целых чисел. Реализуйте метод, который разбивает число на простые множители и возвращает их.
@@ -79,4 +81,14 @@ void main() {
   print("Получаем почту всех пользователей: ${userManager.getEmailUsers()}");
   userManager.deleteUserByIndex(2);
   print("Получаем почту всех пользователей: ${userManager.getEmailUsers()}");
+
+  //9. (Усложнённое). Реализуйте метод, который вычисляет значение определённого интеграла Римана в заданных значениях и с заданной точностью разбиения.
+  // По возможности учтите случаи, когда функция имеет точки разрыва. 
+  //Реализованный метод должен принимать функцию, точки x1 и x2, точность разбиения.
+  print("Задание 9.");
+  double myFunct(double x){
+    return sin(x);
+  }
+  print("Результат: ${calcIntegralR(myFunct, 0, 10, 5)}");
 }
+
